@@ -2,7 +2,7 @@
 
 ### دریافت فهرست سفارش ها
 ```
-POST https://vpon.ir/bridge/api/v1/orders
+POST https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18
 ```
 
 ### کلید API
@@ -15,7 +15,7 @@ Include your API key in the request header:
 
 ### پارامترهای درخواست
 
-The request body should be a JSON object with the following fields:
+Parameters should be sent as **query string** parameters:
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
@@ -76,9 +76,7 @@ The request body should be a JSON object with the following fields:
 | `message` | string | Persian status message |
 | `status` | string | Status of the request (`success`) |
 | `status_code` | integer | Status code (`1` = success) |
-| `data.from` | string | Start date from request (Jalali) |
-| `data.to` | string | End date from request (Jalali) |
-| `data.orders` | array | List of orders |
+
 
 #### Order Object Fields
 
@@ -109,17 +107,17 @@ The request body should be a JSON object with the following fields:
 |--------|--------------|-------------|
 | `0` | "در صف رسیدگی" | In queue for processing |
 | `1` | "در انتظار انجام" | Awaiting completion |
-
+| `2` | "انصراف توسط مشتری" | Cancelled by customer |
+| `3` | "نیاز به بررسی مجدد" | Needs review again |
+| `4` | "پایان یافته" | Finished/Completed |
+| `5` | "نیاز به تعمیر" | Needs repair |
+| `6` | "لغو شده" | Discarded/Cancelled |
+| `7` | "پیش نویس شده" | Draft |
 ### Example cURL Request
 
 ```bash
-curl -X POST https://vpon.ir/bridge/api/v1/orders \
-  -H "X-API-Key: YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ==" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "from": "1405-2-11",
-    "to": "1405-2-18"
-  }'
+curl -X POST "https://vpon.ir/bridge/api/v1/orders?from=1405-2-11&to=1405-2-18" \
+  -H "X-API-Key: YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ=="
 ```
 
 ### Notes
