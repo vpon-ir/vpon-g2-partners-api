@@ -30,7 +30,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 
 ### Response
 
-#### Success Response (200 OK)
+#### Success Response (Http Code 200)
 
 ```json
 {
@@ -77,7 +77,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 }
 ```
 
-#### Failed Response (Http Code 401)
+#### Failed Response (Http Code 400)
 ```json
 {
   "message": "Parameter 'from' is required but missing. format YYYY-M-D e.g: 1405-1-18",
