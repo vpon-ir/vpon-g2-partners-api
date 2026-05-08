@@ -22,15 +22,6 @@ Parameters should be sent as **query string** parameters:
 | `from` | string | No | Start date in Jalali calendar (format: `YYYY-M-D`) |
 | `to` | string | No | End date in Jalali calendar (format: `YYYY-M-D`) |
 
-#### Example Request Body
-
-```json
-{
-  "from": "1405-2-11",
-  "to": "1405-2-18"
-}
-```
-
 ### Response
 
 #### Success Response (200 OK)
