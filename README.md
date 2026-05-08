@@ -93,7 +93,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 - کد 200 در http یعنی درخواست معتبر است و پردازش شده در غیر این صورت خیر
 
 
-### Status Codes
+### کدهای وضعیت سفارش
 
 | status | status_label | Description |
 |--------|--------------|-------------|
