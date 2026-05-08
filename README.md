@@ -53,7 +53,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
         "lng": "0",
         "services_summery": "نصب یا تعویض موتور کولر آبی",
         "services_count": "1",
-        "bill": "0",
+        "bill": "2000000",
         "schedule_date": "1405-2-18",
         "schedule_time": "12-14",
         "status": "1",
