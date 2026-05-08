@@ -13,7 +13,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 ```
 ### کلید API
 
-Include your API key in the request header:
+توسط header کلید api باید ارسال شود
 
 | Header | Value |
 |--------|-------|
@@ -21,12 +21,12 @@ Include your API key in the request header:
 
 ### پارامترهای درخواست
 
-Parameters should be sent as **query string** parameters:
+پارامترها توسط query string ارسال میشوند
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `from` | string | No | تاریخ جلالی ابتدای بازه (format: `YYYY-M-D`) |
-| `to` | string | No | تاریخ جلالی انتهای بازه (format: `YYYY-M-D`) |
+| `from` | string | YES | تاریخ جلالی ابتدای بازه (format: `YYYY-M-D`) |
+| `to` | string | NO | تاریخ جلالی انتهای بازه (format: `YYYY-M-D`) |
 
 ### Response
 
