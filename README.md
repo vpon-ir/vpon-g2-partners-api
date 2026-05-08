@@ -34,24 +34,25 @@ Parameters should be sent as **query string** parameters:
     "to": "1405-2-18",
     "orders": [
       {
-        "id": 36651,
-        "customer": "مرتضی",
+        "id": "36656",
+        "customer": "کیهان جنت خواه",
+        "phone": "09010352806",
+        "partner_note": "",
+        "customer_note": "",
         "address": "",
         "province": "تهران",
         "city": "تهران",
-        "nbhd": "آبشار",
+        "nbhd": "آجودانیه",
         "lat": "",
         "lng": "",
-        "order_summery": "خدمات کولر آبی,نصب یا تعویض موتور کولر آبی,برای نوع متداول موتورهای سیم‌پیچی,",
-        "bill": 1430000,
-        "schedule_date": "1405-2-16",
+        "services_summery": "نصب موتور کولر BLDC بغل نصب",
+        "services_count": "3",
+        "bill": "9306000",
+        "schedule_date": "1405-2-17",
         "schedule_time": "8-10",
-        "status": 0,
+        "status": "0",
         "status_label": "در صف رسیدگی",
-        "submited_at": "1405-2-16 13:43",
-        "finished_at": "",
-        "last_note": "این درخواست توسط شریک تجاری ثبت شد",
-        "last_note_at": "1405-2-16 13:43"
+        "submited_at": "1405-2-17 20:56"
       }
     ]
   },
@@ -89,7 +90,7 @@ Parameters should be sent as **query string** parameters:
 ### Example cURL Request
 
 ```bash
-curl -X POST "https://vpon.ir/bridge/api/v1/orders?from=1405-2-11&to=1405-2-18" \
+curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" \
   -H "X-API-Key: YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ=="
 ```
 
