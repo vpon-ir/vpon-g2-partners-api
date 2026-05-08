@@ -62,11 +62,13 @@ Parameters should be sent as **query string** parameters:
 ```
 
 #### Failed Response (Http Code 401)
+```json
 {
   "message": "Your api-key is invalid, send valid 'X-API-KEY' by header.",
   "status": "failed",
   "status_code": 0
 }
+```
 
 ## نکات 
 - تاریخ ها به جلالی با فرمت () مثال ()
