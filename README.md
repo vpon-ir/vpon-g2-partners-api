@@ -5,7 +5,7 @@
 POST https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18
 ```
 
-### Example cURL Request
+### نمونه cURL
 
 ```bash
 curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" \
@@ -28,7 +28,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 | `from` | string | YES | تاریخ جلالی ابتدای بازه (format: `YYYY-M-D`) |
 | `to` | string | NO | تاریخ جلالی انتهای بازه (format: `YYYY-M-D`) |
 
-### Response
+### پاسخ ها
 
 #### Success Response (Http Code 200)
 
@@ -68,7 +68,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 }
 ```
 
-#### Failed Response (Http Code 401)
+####  خطا نوع اول (Http Code 401)
 ```json
 {
   "message": "Must have a valid X-API-KEY in header.",
@@ -77,7 +77,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 }
 ```
 
-#### Failed Response (Http Code 400)
+#### خطای نوع دوم (Http Code 400)
 ```json
 {
   "message": "Parameter 'from' is required but missing. format YYYY-M-D e.g: 1405-1-18",
@@ -90,7 +90,7 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 - تاریخ ها به جلالی با فرمت (YYYY-m-d)
 - مبالغ همیشه به تومان هست
 - در هر دقیقه حداکثر 2 درخواست تکراری میتوانید ارسال کنید
-
+- کد 200 در http یعنی درخواست معتبر است و پردازش شده در غیر این صورت خیر
 
 
 ### Status Codes
