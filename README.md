@@ -5,6 +5,12 @@
 POST https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18
 ```
 
+### Example cURL Request
+
+```bash
+curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" \
+  -H "X-API-Key: YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ=="
+```
 ### کلید API
 
 Include your API key in the request header:
@@ -19,8 +25,8 @@ Parameters should be sent as **query string** parameters:
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `from` | string | No | Start date in Jalali calendar (format: `YYYY-M-D`) |
-| `to` | string | No | End date in Jalali calendar (format: `YYYY-M-D`) |
+| `from` | string | No | تاریخ جلالی ابتدای بازه (format: `YYYY-M-D`) |
+| `to` | string | No | تاریخ جلالی انتهای بازه (format: `YYYY-M-D`) |
 
 ### Response
 
@@ -71,7 +77,7 @@ Parameters should be sent as **query string** parameters:
 ```
 
 ## نکات 
-- تاریخ ها به جلالی با فرمت () مثال ()
+- تاریخ ها به جلالی با فرمت (YYYY-m-d)
 - مبالغ همیشه به تومان هست
 - در هر دقیقه حداکثر 1 درخواست میتوانید ارسال کنید
 
@@ -89,10 +95,5 @@ Parameters should be sent as **query string** parameters:
 | `5` | "نیاز به تعمیر" |  |
 | `6` | "لغو شده" |  |
 | `7` | "پیش نویس شده" |  |
-### Example cURL Request
 
-```bash
-curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" \
-  -H "X-API-Key: YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ=="
-```
 
