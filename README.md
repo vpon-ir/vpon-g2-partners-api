@@ -60,50 +60,32 @@ Parameters should be sent as **query string** parameters:
 }
 ```
 
-### Response Fields
+#### Failed Response (Http Code 401)
+{
+  "message": "Your api-key is invalid, send valid 'X-API-KEY' by header.",
+  "status": "failed",
+  "status_code": 0
+}
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `message` | string | Persian status message |
-| `status` | string | Status of the request (`success`) |
-| `status_code` | integer | Status code (`1` = success) |
+## نکات 
+- تاریخ ها به جلالی با فرمت () مثال ()
+- مبالغ همیشه به تومان هست
+- در هر دقیقه حداکثر 1 درخواست میتوانید ارسال کنید
 
 
-#### Order Object Fields
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `id` | integer | Unique order identifier |
-| `customer` | string | Customer name |
-| `address` | string | Full address (may be empty) |
-| `province` | string | Province name |
-| `city` | string | City name |
-| `nbhd` | string | Neighborhood name |
-| `lat` | string | Latitude coordinate (may be empty) |
-| `lng` | string | Longitude coordinate (may be empty) |
-| `order_summery` | string | Comma-separated list of services |
-| `bill` | integer | Bill amount in IRR (toman/rial) |
-| `schedule_date` | string | Scheduled service date (Jalali) |
-| `schedule_time` | string | Scheduled time window |
-| `status` | integer | Order status code |
-| `status_label` | string | Human-readable status |
-| `submited_at` | string | Submission datetime (Jalali) |
-| `finished_at` | string | Completion datetime (empty if not finished) |
-| `last_note` | string | Most recent note on the order |
-| `last_note_at` | string | Last note timestamp (Jalali) |
 
 ### Status Codes
 
 | status | status_label | Description |
 |--------|--------------|-------------|
-| `0` | "در صف رسیدگی" | In queue for processing |
-| `1` | "در انتظار انجام" | Awaiting completion |
-| `2` | "انصراف توسط مشتری" | Cancelled by customer |
-| `3` | "نیاز به بررسی مجدد" | Needs review again |
-| `4` | "پایان یافته" | Finished/Completed |
-| `5` | "نیاز به تعمیر" | Needs repair |
-| `6` | "لغو شده" | Discarded/Cancelled |
-| `7` | "پیش نویس شده" | Draft |
+| `0` | "در صف رسیدگی" |  |
+| `1` | "در انتظار انجام" | |
+| `2` | "انصراف توسط مشتری" |  |
+| `3` | "نیاز به بررسی مجدد" |  |
+| `4` | "پایان یافته" |  |
+| `5` | "نیاز به تعمیر" |  |
+| `6` | "لغو شده" |  |
+| `7` | "پیش نویس شده" |  |
 ### Example cURL Request
 
 ```bash
@@ -111,9 +93,3 @@ curl -X POST "https://vpon.ir/bridge/api/v1/orders?from=1405-2-11&to=1405-2-18" 
   -H "X-API-Key: YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ=="
 ```
 
-### Notes
-
-- Dates are in the Jalali (Persian) calendar system
-- If `from` and `to` are not provided, the API may return all orders (check with provider)
-- Empty string values for `address`, `lat`, `lng`, and `finished_at` indicate missing data
-- The `bill` amount is in Iranian currency (the example shows 1,430,000 IRR)
