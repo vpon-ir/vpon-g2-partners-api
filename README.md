@@ -70,7 +70,16 @@ curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" 
 #### Failed Response (Http Code 401)
 ```json
 {
-  "message": "Your api-key is invalid, send valid 'X-API-KEY' by header.",
+  "message": "Must have a valid X-API-KEY in header.",
+  "status": "failed",
+  "status_code": 0
+}
+```
+
+#### Failed Response (Http Code 401)
+```json
+{
+  "message": "Parameter 'from' is required but missing. format YYYY-M-D e.g: 1405-1-18",
   "status": "failed",
   "status_code": 0
 }
