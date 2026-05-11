@@ -11,6 +11,72 @@ POST https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18
 curl -X POST "https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18" \
   -H "X-API-Key: YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ=="
 ```
+
+### نمونه کد php
+```php
+<?php
+function fetchOrders() {
+    $url = 'https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18';
+    $apiKey = 'YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ==';
+    
+    $ch = curl_init();
+    
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'X-API-Key: ' . $apiKey,
+        'Content-Type: application/json'
+    ]);
+    
+    $response = curl_exec($ch);
+    $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    
+    if (curl_errno($ch)) {
+        $error = curl_error($ch);
+        curl_close($ch);
+        throw new Exception('cURL Error: ' . $error);
+    }
+    
+    curl_close($ch);
+    
+    if ($httpCode >= 400) {
+        throw new Exception('HTTP Error: ' . $httpCode . ' - ' . $response);
+    }
+    
+    return json_decode($response, true);
+}
+```
+
+### نمونه کد JS
+```js
+function fetchOrders() {
+    const url = 'https://vpon.ir/bridge/api/v2/orders?from=1405-2-11&to=1405-2-18';
+    const apiKey = 'YzFhYjRiYjgwMTJmMTg5ZGZTcTYwYjghYjRiY2FjOJmMTg5OTGJmQ==';
+    
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'X-API-Key': apiKey,
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('Success:', data);
+        return data;
+        
+    } catch (error) {
+        console.error('Error:', error);
+        throw error;
+    }
+}
+```
 ### کلید API
 
 توسط header کلید api باید ارسال شود
