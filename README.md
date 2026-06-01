@@ -118,7 +118,18 @@ function fetchOrders() {
         "lat": "",
         "lng": "",
         "services_summery": "نصب موتور کولر BLDC وسط نصب",
-        "services_count": "1",
+        "services_count": "1", 
+        "services": [
+          {
+            "group_id": "1",
+            "title": "خدمات کولر آبی",
+            "note": "نصب یا تعویض موتور کولر آبی  test",
+            "count": "1",
+            "products_price": "0",
+            "skills_price": "1000000",
+            "price": "1000000"
+          }
+        ],
         "bill": "4004000",
         "schedule_date": "1405-2-19",
         "schedule_time": "18-20",
