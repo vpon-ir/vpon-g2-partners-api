@@ -157,7 +157,7 @@ function fetchOrders() {
 }
 ```
 
-امکان دارد مقدار services  و یا customer_feedback خالی بصورت [] باشد
+امکان دارد مقدار services  و یا customer_feedback خالی بصورت null باشد
 
 
 ####  خطا نوع اول (Http Code 401)
