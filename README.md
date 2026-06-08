@@ -135,6 +135,7 @@ function fetchOrders() {
         "schedule_time": "18-20",
         "status": "0",
         "status_label": "در صف رسیدگی",
+        "last_report": "",
         "submited_at": "1405-2-18 16:09",
         "form": "https://form.vpondev.ir/5a779ad2-54b5-4a89-bc8d-b9f7aa314fcf/e5508c11-edfd-440f-be4c-0294b44f19c2",
         "form_admin": "https://formadmin.vpondev.ir/5a779ad2-54b5-4a89-bc8d-b9f7aa314fcf/e5508c11-edfd-440f-be4c-0294b44f19c2",
