@@ -159,6 +159,8 @@ function fetchOrders() {
 ```
 
 امکان دارد مقدار services  و یا customer_feedback خالی بصورت null باشد
+در صورت لغو فبلد last_report دربگیرنده اخرین گزارش و علت لغو است
+
 
 
 ####  خطا نوع اول (Http Code 401)
