@@ -1,6 +1,6 @@
 # دریافت فهرست کارهای پروژه طبق فرم کارشناسی
 
-https://vpon.ir/bridge/api/v2/project/report/?h=10&form=1
+https://vpon.ir/bridge/api/v2/project/report/?h=10&form=2
 
 شماره فرم با form مشخص میشود
 
