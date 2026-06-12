@@ -1,10 +1,11 @@
 # دریافت فهرست کارهای پروژه طبق فرم کارشناسی
 
-https://vpon.ir/bridge/api/v2/project/report/?h=10&form=2
+https://vpon.ir/bridge/api/v2/project/report/?form=2&h=10
+https://vpon.ir/bridge/api/v2/project/report/?form=2&day=1405-3-12
 
-شماره فرم با form مشخص میشود
-
-تعداد ساعت ها با h مشخص میشود
+شماره فرم با form مشخص میشود (اجباری)
+تاریخ شمسی توسط پارامتر day ارسال میشود (اختیاری)
+تعداد ساعت ها با h مشخص میشود (اختیاری)
 
 ```json
 {
