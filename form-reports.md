@@ -19,11 +19,12 @@ https://vpon.ir/bridge/api/v2/project/report/?form=2&day=1405-3-12
 
 پاسخ :
 
-فیلد video و image ممکن است وجو داشته باشه یا خیر
+فیلد video و image ممکن است وجود نداشته باشد 
 
-تعداد فیلدهای field_1 field_2 field_x نامشخص است و در هر رکورد ممکن است 4 تا 5 تا یا حتی بیشتر باشد و ثابت نیست
+تعداد فیلدهای field_1 field_2 field_x نامشخص است و در هر رکورد ممکن است 4 و 5 یا بیشتر باشد و ثابت نیست
 
-فیلد های (datetime و form_id و submit_id ) وجود دارد
+فیلد های (datetime و form_id و submit_id ) همیشه وجود دارد
+
 
 ```json
 {
